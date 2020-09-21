@@ -2,32 +2,18 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Search from './Search'
 const HeaderContainer = styled.div`
   width: auto;
   height: 60px;
-  background-color: var(--oxford-blue);
+  background-color: rgba(var(--oxford-blue));
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  
-  .search-container {
-    width: 500px;
-    input {
-      padding: 10px;
-      width: 100%;
-      height: 35px;
-      border-radius: 3px;
-      border: none;
-      outline: none;
-    }
-    input:focus {
-      padding: 7px;
-      border: solid 3px rgba(var(--orange-web));
-    }
-  }
+ 
 `;
 
 const NavigationContainer = styled.div`
@@ -46,6 +32,7 @@ const NavigationContainer = styled.div`
     width: 100px;
     text-align: center;
     padding: 8px;
+    transition: 0.3s;
     :hover {
       border-radius: 3px;
       background-color: rgba(var(--platinum), 0.1);
@@ -57,9 +44,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <div className="logo">Logo</div>
-      <div className="search-container">
-        <input placeholder="Cauta pe ceFilm.ro" type="text"></input>
-      </div>
+        <Search/>
       <NavigationContainer>
         <nav>
           <ul>

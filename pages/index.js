@@ -15,13 +15,12 @@ export default function Home() {
   }, [])
 
   // const {value} = useSelector(state => state.value)
-  const { movies } = useSelector(state => state)
+  // const { movies } = useSelector(state => state)
 
-  console.log(movies.results)
+  // console.log(movies.results)
   return (
     <div className="container">
-      {/* <div><p  >asdadasp</p> </div>
-      <button onClick={() => dispatch(fetchTrending())}>Da click</button> */}
+ 
       <Header />
     </div>
 
