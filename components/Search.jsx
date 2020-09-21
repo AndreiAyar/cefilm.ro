@@ -44,7 +44,6 @@ const Dropdown = styled.div`
   .overview {
     white-space: pre;
     width: 400px;
-
     overflow: hidden;
     text-overflow: ellipsis;
   }
