@@ -1,9 +1,9 @@
 :root {
-  --main-bg-color: #000000;
-  --oxford-blue: rgb(20, 33, 61);
+  --main-bg-color: 0, 0, 0;
+  --oxford-blue:  20, 33, 61;
   --orange-web:  252, 163, 17;
   --platinum:  229, 229, 229 ;
-  --white:#FFFFFF;
+  --white:255, 255, 255;
 }
 html,
 body {
