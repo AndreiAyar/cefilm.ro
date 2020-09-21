@@ -25,9 +25,29 @@ const SearchContainer = styled.div`
 const Dropdown = styled.div`
   position: absolute;
   width: inherit;
-  height: 400px;
+  height: auto;
   margin-top: 5px;
   background-color: rgba(var(--platinum));
+  ul {
+    padding: 0;
+    margin: 5px;
+  }
+  img {
+    width: 60px;
+  }
+  a {
+    display: flex;
+  }
+  .info_container {
+    margin: 5px;
+  }
+  .overview {
+    white-space: pre;
+    width: 400px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 const Search = () => {
@@ -51,12 +71,27 @@ const Search = () => {
         type="text"
       ></input>
 
-      {searchValue && search && search.results && (
+      {searchValue  && search && search.results && searchValue.replace(/\s/g, '').length > 0  && (
         <Dropdown>
           <ul>
-            {search.results.slice(0, 10).map(({ title }, index) => (
-              <li key={index}>{titel}</li>
-            ))}
+            {search.results.slice(0, 10).map(
+              ({ title, poster_path, overview }, index) =>
+                poster_path !== null && (
+                  <li key={index}>
+                    <a href="#">
+                      <div className="poster">
+                        <img
+                          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                        />
+                      </div>
+                      <div className="info_container">
+                        <div className="title">{title}</div>
+                        <div className="overview">{overview}</div>
+                      </div>
+                    </a>
+                  </li>
+                )
+            )}
           </ul>
         </Dropdown>
       )}
