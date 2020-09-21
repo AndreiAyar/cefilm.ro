@@ -51,11 +51,11 @@ const Search = () => {
         type="text"
       ></input>
 
-      {searchValue && (
+      {searchValue && search && search.results && (
         <Dropdown>
           <ul>
-            {search.results.slice(0, 10).map(({ title }) => (
-              <li>{title}</li>
+            {search.results.slice(0, 10).map(({ title }, index) => (
+              <li key={index}>{titel}</li>
             ))}
           </ul>
         </Dropdown>
