@@ -3,7 +3,7 @@ import API_KEY from '../../api_key.js'
 export const FETCH_TRENDING = "FETCH_TRENDING";
 export const SEARCH_MOVIES = "SEARCH_MOVIES";
 import axios from 'axios'
-// export const DECREMENT_COUNTER = "DECREMENT_COUNTER";
+
  
 //Action Creator
 export const fetchTrending = (h) => async dispatch => {
